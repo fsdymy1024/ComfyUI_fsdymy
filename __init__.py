@@ -1,6 +1,3 @@
-from .nodes import SaveImageWithoutMetadata
+from .nodes import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
 
-
-NODE_CLASS_MAPPINGS = {"Save Image Without Metadata": SaveImageWithoutMetadata,}
-
-NODE_DISPLAY_NAME_MAPPINGS = {"Save Image Without Metadata": "Save Image Without Metadata❌"}
+__all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
