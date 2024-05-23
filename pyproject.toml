@@ -1,0 +1,14 @@
+[project]
+name = "comfyui_fsdymy"
+description = "Nodes:Save Image Without Metadata"
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/fsdymy1024/ComfyUI_fsdymy"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI_fsdymy"
+Icon = ""
