@@ -1,0 +1,5 @@
+{
+    "url": "https://open.bigmodel.cn/api/paas/v4",
+    "key": "xxx",
+    "key.json": "在上方填写智谱Ai API的api_url和key."
+}
