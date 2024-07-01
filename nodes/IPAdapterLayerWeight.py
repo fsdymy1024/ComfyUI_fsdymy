@@ -29,6 +29,5 @@ class IPAdapterLayerWeight:
     CATEGORY = "fsdymy/ipadapter"
 
     def get_weight(self, index_00, index_01, index_02, index_03, index_04, index_05, index_06, index_07, index_08, index_09, index_10, index_11):
-        text = f"{index_00},{index_01},{index_02},{index_03},{index_04},{index_05},{index_06},{index_07},{index_08},{index_09},{index_10},{index_11}"
-        # print(text)
+        text = f"0: {index_00}, 1: {index_01}, 2: {index_02}, 3: {index_03}, 4: {index_04}, 5: {index_05}, 6: {index_06}, 7: {index_07}, 8: {index_08}, 9: {index_09}, 10: {index_10}, 11: {index_11}"
         return (text,)
