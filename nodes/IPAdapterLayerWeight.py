@@ -5,17 +5,18 @@ class IPAdapterLayerWeight:
     @classmethod
     def INPUT_TYPES(cls):
         weights = {
-            "layer_00": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_01": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_02": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_03": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_04": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_05": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_06": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_07": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_08": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_09": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
-            "layer_10": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.005}),
+            "index_00": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_01": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_02": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_03": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_04": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_05": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_06": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_07": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_08": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_09": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_10": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
+            "index_11": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 5.0, "step": 0.1}),
         }
         return {
             "required":
@@ -27,8 +28,7 @@ class IPAdapterLayerWeight:
     FUNCTION = "get_weight"
     CATEGORY = "fsdymy/ipadapter"
 
-    def get_weight(self, layer_00, layer_01, layer_02, layer_03, layer_04, layer_05, layer_06, layer_07, layer_08,
-                   layer_09, layer_10):
-        text = f"0: {layer_00}, 1: {layer_01}, 2: {layer_02}, 3: {layer_03}, 4: {layer_04}, 5: {layer_05}, 6: {layer_06}, 7: {layer_07}, 8: {layer_08}, 9: {layer_09}, 10: {layer_10}"
+    def get_weight(self, index_00, index_01, index_02, index_03, index_04, index_05, index_06, index_07, index_08, index_09, index_10, index_11):
+        text = f"{index_00},{index_01},{index_02},{index_03},{index_04},{index_05},{index_06},{index_07},{index_08},{index_09},{index_10},{index_11}"
         # print(text)
         return (text,)

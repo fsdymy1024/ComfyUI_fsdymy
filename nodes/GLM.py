@@ -1,5 +1,5 @@
-import os
 import json
+import os
 from zhipuai import ZhipuAI
 
 
@@ -144,8 +144,11 @@ class ZhiPuAiNode:
         return (content,json.dumps(messages, indent=4),json.dumps(self.session_history, indent=4),)
 
 class ShowText:
+    def __init__(self):
+        pass
+
     @classmethod
-    def INPUT_TYPES(s):
+    def INPUT_TYPES(cls):
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),

@@ -57,7 +57,7 @@ class PreviewImageWithoutMetadata(SaveImageWithoutMetadata):
         self.compress_level = 1
 
     @classmethod
-    def INPUT_TYPES(s):
+    def INPUT_TYPES(cls):
         return {"required":
                     {"images": ("IMAGE", ), },
                 "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
